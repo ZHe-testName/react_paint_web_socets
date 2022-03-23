@@ -1,0 +1,76 @@
+@import './variabels.scss';
+
+.toolbar {
+    height: $toolbar-height;
+    background-color: $toolbar-bg-color;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 4px 5px gray;
+    z-index: 999;
+
+    &__btn {
+        width: 25px;
+        height: 25px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background-size: cover;
+        margin-left: 15px;
+    }
+
+    .brush {
+        background: url('../assets/icons/brush.png') no-repeat center center;
+    }
+
+    .rect {
+        background: url('../assets/icons/rect.png') no-repeat center center;
+    }
+
+    .circle {
+        background: url('../assets/icons/circle.png') no-repeat center center;
+    }
+
+    .eraser {
+        background: url('../assets/icons/eraser.png') no-repeat center center;
+    }
+
+    .line {
+        background: url('../assets/icons/line.png') no-repeat center center;
+    }
+
+    .palette {
+        background: url('../assets/icons/palette.png') no-repeat center center;
+        
+        input {
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+
+    .undo {
+        margin-left: auto;
+        background: url('../assets/icons/undo.png') no-repeat center center;
+    }
+
+    .rendo {
+        background: url('../assets/icons/redo.png') no-repeat center center;
+    }
+
+    .save {
+        margin-right: 15px;
+        background: url('../assets/icons/save.png') no-repeat center center;
+    }
+}
+
+.settings-bar {
+    height: $toolbar-height;
+    background-color: $toolbar-bg-color;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 4px 5px gray;
+    top: $toolbar-height;
+}
