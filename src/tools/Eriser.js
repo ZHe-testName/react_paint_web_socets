@@ -1,14 +1,11 @@
 import Tool from "./Tool";
 
-export default class Brush extends Tool {
+export default class Eriser extends Tool {
     constructor(canvas) {
         super(canvas);
-
-        //после создания экземпляра мы сразу вяжем обработчики к канвасу
         this.listen();
     }
 
-    //в этой функции привязываем обработчики собитй для канваса
     listen() {
         this.canvas.onmouseup = this.mouseUpHandler.bind(this);
         this.canvas.onmousedown = this.mouseDownHandler.bind(this);
@@ -33,6 +30,7 @@ export default class Brush extends Tool {
 
     draw(x, y) {
         this.ctx.lineTo(x, y);
+        this.ctx.strokeStyle = '#FFFFFF';
         this.ctx.stroke();
     }
 };

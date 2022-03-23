@@ -8,11 +8,24 @@ export default class Tool {
         this.destroyEvents()
     }
 
+    set fillStyle(color) {
+        this.ctx.fillStyle = color;
+    }
+
+    set strokeStyle(color) {
+        this.ctx.strokeStyle = color;
+    }
+
+    set lineWidth(width) {
+        this.ctx.lineWidth = width;
+    }
+
     //метод нужен для того чтобы удалять слушатели с обного инструмента
     //при выборе другого иначе они будут там висеть постоянно
     destroyEvents() {
         this.canvas.onmouseup = null;
         this.canvas.onmousedown = null;
         this.canvas.onmousemove = null;
+        this.ctx.strokeStyle = '#000';
     }
 };

@@ -9,9 +9,21 @@ class ToolState {
         makeAutoObservable(this);
     }
 
-    //экшн нужен для вызова изменения состояния
+    //экшны нужены для вызова изменения состояния
     setTool(tool) {
         this.tool = tool;
+    }
+
+    setFillColor(color) {
+        this.tool.fillStyle = color;
+    }
+
+    setStrokeColor(color) {
+        this.tool.strokeStyle = color;
+    }
+
+    setLineWidth(width) {
+        this.tool.lineWidth = width;
     }
 };
 
