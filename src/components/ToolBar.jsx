@@ -43,9 +43,15 @@ const ToolBar = () => {
                 />
             </label>
 
-            <button className="toolbar__btn undo"></button>
+            <button 
+                className="toolbar__btn undo"
+                onClick={() => canvasState.undo()}
+            ></button>
 
-            <button className="toolbar__btn rendo"></button>
+            <button 
+                className="toolbar__btn rendo"
+                onClick={() => canvasState.rendo()}
+            ></button>
 
             <button className="toolbar__btn save"></button>
         </div>

@@ -26,6 +26,5 @@ export default class Tool {
         this.canvas.onmouseup = null;
         this.canvas.onmousedown = null;
         this.canvas.onmousemove = null;
-        this.ctx.strokeStyle = '#000';
     }
 };

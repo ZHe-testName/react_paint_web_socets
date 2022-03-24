@@ -15,9 +15,20 @@ const Canvas = observer(() => {
         toolState.setTool(new Brush(canvasRef.current));
     }, []);
 
+    //при нажатии мы делаем снимок текущего канваса
+    //и добавляем его в состояние
+    const mouseDownHandler = () => {
+        canvasState.pushToUndo(canvasRef.current.toDataURL());
+    };
+
     return (
         <div className='canvas'>
-            <canvas ref={canvasRef} width={900} height={550}/>
+            <canvas 
+                ref={canvasRef} 
+                width={900} 
+                height={550}
+                onMouseDown={() => mouseDownHandler()}
+            />
         </div>
     );
 });
